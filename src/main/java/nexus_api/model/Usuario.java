@@ -40,11 +40,11 @@ public class Usuario {
     @Column(name = "ativo", nullable = false, columnDefinition = "BOOLEAN DEFAULT TRUE")
     private boolean ativo = true;
 
-    @Column(name = "data_cadastro", nullable = false, updatable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_cadastro", nullable = false, updatable = false)
     @CreatedDate
     private LocalDateTime dataCadastro;
 
-    @Column(name = "data_ultima_atualizacao", nullable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_ultima_atualizacao", nullable = false)
     @LastModifiedDate
     private LocalDateTime dataUltimaAtualizacao;
 
