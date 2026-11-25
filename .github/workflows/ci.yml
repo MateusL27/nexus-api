@@ -36,6 +36,9 @@ jobs:
           java-version: '21'
           cache: 'maven'
 
+      - name: Dar permissão de execução ao Maven Wrapper
+        run: chmod +x mvnw
+
       - name: Rodar testes com Maven
         env:
           DB_URL: jdbc:postgresql://localhost:5432/nexusdb
