@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: nexus-api
+  datasource:
+    # DB_URL, DB_USERNAME, DB_PASSWORD será substítuido por variaveis de ambiente
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/nexusdb}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: NexusHikariPool
+      minimum-idle: 10
+      maximum-pool-size: 10
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: true
