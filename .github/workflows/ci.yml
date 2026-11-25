@@ -16,7 +16,7 @@ jobs:
         env:
           POSTGRES_DB: nexusdb
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: ${{ secrets.TEST_DB_PASSWORD }}
+          POSTGRES_PASSWORD: nexus_test_pass
         ports:
           - 5432:5432
         options: >-
@@ -40,6 +40,6 @@ jobs:
         env:
           DB_URL: jdbc:postgresql://localhost:5432/nexusdb
           DB_USERNAME: postgres
-          DB_PASSWORD: ${{ secrets.TEST_DB_PASSWORD }}
+          DB_PASSWORD: nexus_test_pass
           SPRING_JPA_HIBERNATE_DDL_AUTO: create-drop
         run: ./mvnw test
