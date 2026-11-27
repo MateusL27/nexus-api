@@ -51,11 +51,11 @@ public class Produto {
     @Column(name = "ativo", columnDefinition = "BOOLEAN DEFAULT TRUE")
     private boolean ativo;
 
-    @Column(name = "data_cadastro", nullable = false, updatable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_cadastro", nullable = false, updatable = false)
     @CreatedDate
     private LocalDateTime dataCadastro;
 
-    @Column(name = "data_ultima_atualizacao", nullable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_ultima_atualizacao", nullable = false)
     @LastModifiedDate
     private LocalDateTime dataUltimaAtualizacao;
 

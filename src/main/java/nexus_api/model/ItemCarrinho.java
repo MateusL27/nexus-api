@@ -36,11 +36,11 @@ public class ItemCarrinho {
     @Column(name = "quantidade", nullable = false)
     private int quantidade;
 
-    @Column(name = "data_criacao", nullable = false, updatable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_criacao", nullable = false, updatable = false)
     @CreatedDate
     private LocalDateTime dataCriacao;
 
-    @Column(name = "data_ultima_atualizacao", nullable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_ultima_atualizacao", nullable = false)
     @LastModifiedDate
     private LocalDateTime dataUltimaAtualizacao;
 
