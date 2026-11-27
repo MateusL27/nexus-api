@@ -31,11 +31,11 @@ public class Carrinho {
     @JoinColumn(name = "usuario_id", nullable = false, unique = true)
     private Usuario usuario;
 
-    @Column(name = "data_criacao", nullable = false, updatable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_criacao", nullable = false, updatable = false)
     @CreatedDate
     private LocalDateTime dataCriacao;
 
-    @Column(name = "data_ultima_atualizacao", nullable = false, columnDefinition = "CURRENT_TIMESTAMP")
+    @Column(name = "data_ultima_atualizacao", nullable = false)
     @LastModifiedDate
     private LocalDateTime dataUltimaAtualizacao;
 
